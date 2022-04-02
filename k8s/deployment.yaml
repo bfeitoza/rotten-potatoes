@@ -25,7 +25,6 @@ spec:
               value: mongopwd
 
 ---
-
 #Service do MongoDB
 apiVersion: v1
 kind: Service
@@ -39,9 +38,7 @@ spec:
   type: ClusterIP
 
 ---
-
 #Deployment da aplicacao web Rotten Potatos
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -73,7 +70,7 @@ spec:
             value: mongopwd
 
 ---
-
+#Service da aplicação web
 apiVersion: v1
 kind: Service
 metadata:
@@ -85,4 +82,4 @@ spec:
   - port: 80
     targetPort: 5000
     nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
