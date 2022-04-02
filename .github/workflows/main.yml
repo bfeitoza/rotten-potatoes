@@ -27,5 +27,4 @@ jobs:
           push: true
           tags: |
             bfeitoza/rotten-potatoes:latest
-            bfeitoza/rotten-potatoes:{{ github.run_number }}
-            
+            bfeitoza/rotten-potatoes:${{ github.run_number }}
